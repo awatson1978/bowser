@@ -3,16 +3,7 @@
   * https://github.com/ded/bowser
   * MIT License | (c) Dustin Diaz 2014
   */
-
-!function (name, definition) {
-  if (typeof module != 'undefined' && module.exports) module.exports['browser'] = definition()
-  else if (typeof define == 'function') define(definition)
-  else this[name] = definition()
-}('bowser', function () {
-  /**
-    * See useragents.js for examples of navigator.userAgent
-    */
-
+bowser = function(){
   var t = true
 
   function detect(ua) {
@@ -235,5 +226,4 @@
    */
   bowser._detect = detect;
 
-  return bowser
-});
+}
