@@ -3,6 +3,6 @@
     "description": "Meteorite package that provides browser detection via bowser.js.",
     "homepage": "https://github.com/awatson1978/bowser",
     "author": "Abigail Watson  (http://www.pentasyllabic.com)",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "git": "https://github.com/awatson1978/bowser.git"
 }
