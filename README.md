@@ -35,6 +35,15 @@ Alternatively, if you'd like to bypass Atmosphere, and install directly from Git
 
 ````
 
+------------------------
+### Usage
+
+Initialize the Browser
+````js
+Meteor.startup(function(){
+  bowser = BrowserObserver.init();
+});
+````
 
 ------------------------
 ### Example using Iron Router
@@ -42,19 +51,19 @@ Alternatively, if you'd like to bypass Atmosphere, and install directly from Git
 ````js
 // example using iron-router
 Router.map(function() {
-    this.route('specific_post', {
-        path: '/post/:_id',
-        data: function(){
-            return Posts.findOne(this.params._id)
-        },
-        onBeforeAction: function () {
-            // render the unsupported browser page if user isn't using Chrome
-            if(!bowser.webkit){
-                this.render('browserNotSupportedPage');
-                this.stop();
-            }
+  this.route('specific_post', {
+    path: '/post/:_id',
+    data: function(){
+      return Posts.findOne(this.params._id)
+    },
+    onBeforeAction: function () {
+      // render the unsupported browser page if user isn't using Chrome
+      if(!bowser.webkit){
+        this.render('browserNotSupportedPage');
+          this.stop();
         }
-    });
+      }
+  });
 });
 ````
 

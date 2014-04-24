@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "bowser": {
+        "path": "."
+      }
+    },
+    "packages": {
+      "bowser": {
+        "path": "."
+      }
+    }
+  }
+}
