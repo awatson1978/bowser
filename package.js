@@ -1,5 +1,6 @@
 Package.describe({
-    summary: "Meteorite package that provides browser detection via bowser.js."
+    summary: "Meteorite package that provides browser detection via bowser.js.",
+    version: "1.0.0"
 });
 
 Package.on_use(function (api) {
